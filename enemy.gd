@@ -54,9 +54,9 @@ func _physics_process(delta):
 	else:
 		nav_agent.target_position = target.global_position
 		var next_nav_point = nav_agent.get_next_path_position()
-		print('next nav', next_nav_point)
+		#print('next nav', next_nav_point)
 		var dir = next_nav_point - player.global_position
-		print('direction', dir)
+		#print('direction', dir)
 		
 		
 	
@@ -80,6 +80,7 @@ func clamp_angle(angle, min_angle, max_angle):
 	
 
 func _on_CharacterBody2D_body_shape_entered(body_id, body, body_shape, local_shape):
-	
+
 	if is_on_floor():
 		jump_count = 0
+

@@ -16,6 +16,9 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		if Input.is_action_pressed("fly"):
+			velocity.y = velocity.y /2
+			
 	else:
 		jump_count = 0
 
@@ -43,3 +46,10 @@ func _physics_process(delta):
 func _on_CharacterBody2D_body_shape_entered(body_id, body, body_shape, local_shape):
 	if is_on_floor():
 		jump_count = 0
+
+
+
+
+func _on_area_2d_area_entered(area):
+	print("hello")
+	pass # Replace with function body.

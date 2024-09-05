@@ -12,7 +12,7 @@ var _paused:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player =  $CharacterBody2D
+	player =  $player
 	# Assuming these nodes are children of this Node2D
 	host = $CanvasLayer/PanelContainer/MarginContainer/GridContainer/host
 	join = $CanvasLayer/PanelContainer/MarginContainer/GridContainer/join
